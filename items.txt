@@ -1,0 +1,19 @@
+id	Category	name	price
+1	Foods	Potato Chips	500
+2	Foods	Fish Chips	500
+3	Foods	Puci Cake	350
+4	Foods	Sausage	250
+5	Drinks	Myanmar Beer	1650
+6	Drinks	Tiger Beer	1200
+7	Drinks	Cocacola	500
+8	Drinks	Pepsi	350
+9	Mens	Shaving Creen	1500
+10	Mens	Shampoo	3000
+11	Mens	Washing Soap	2500
+12	Girls	Fair & Lovely	2300
+13	Girls	Hair Coat	3500
+14	Makeup	Bella	6000
+15	Others	AAA Battery	300
+16	Others	Lighter (Big)	400
+17	Others	Lighter (Medium)	200
+18	Others	Lighter (Small)	150

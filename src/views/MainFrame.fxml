@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="650.0" prefWidth="900.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MainFrame">
+   <children>
+      <MenuBar style="-fx-background-color: lightgrey;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="uploadmenu" mnemonicParsing="false" onAction="#upload" text="Upload" />
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox prefHeight="70.0" styleClass="color-primary">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.88890075683594" minWidth="10.0" prefWidth="270.88890075683594" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="643.5556030273438" minWidth="10.0" prefWidth="504.8889567057292" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="272.888916015625" minWidth="0.0" prefWidth="65.11104329427087" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="title_pos" text="Mini POS" textFill="WHITE">
+                     <font>
+                        <Font name="Almanac MT" size="26.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="buttonicon" alignment="CENTER" prefHeight="28.0" prefWidth="68.0" GridPane.columnIndex="2">
+                     <children>
+                        <SVGPath fx:id="icon" content="M0 2v20h32v-20h-32zM30 20h-28v-16h28v16zM21 24h-10l-1 4-2 2h16l-2-2z" fill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </SVGPath>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+      <StackPane fx:id="content" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" styleClass="color-primary">
+         <children>
+            <Label fx:id="message" text="Application Message Will Show Here!" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

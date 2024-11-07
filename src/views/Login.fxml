@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox prefHeight="350.0" prefWidth="450.0" stylesheets="@application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="views.Login">
+   <children>
+      <HBox prefHeight="80.0">
+         <children>
+            <Label styleClass="text-white" text="POS Login">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="pad-20" />
+            <String fx:value="color-primary" />
+         </styleClass>
+      </HBox>
+      <HBox alignment="CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../loginimg.png" />
+               </image>
+            </ImageView>
+            <GridPane HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.6666259765625" minWidth="10.0" prefWidth="162.3333536783854" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="28.33331298828125" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="message" textFill="RED" />
+                  <Label text="Login" GridPane.rowIndex="1" />
+                  <TextField fx:id="login" GridPane.rowIndex="2" />
+                  <PasswordField fx:id="password" GridPane.rowIndex="4" />
+                  <Label text="Password" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER_LEFT" spacing="20.0" GridPane.rowIndex="5">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#login" prefWidth="60.0" text="Login">
+                           <styleClass>
+                              <String fx:value="color-primary" />
+                              <String fx:value="text-white" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#cancel" prefWidth="60.0" text="Cancel">
+                           <styleClass>
+                              <String fx:value="color-primary" />
+                              <String fx:value="text-white" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

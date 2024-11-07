@@ -1,0 +1,11 @@
+.color-primary{
+	-fx-background-color:#365893;
+}
+
+.pad-20{
+	-fx-padding: 20 20 20 20;
+}
+
+.text-white{
+	-fx-text-fill:white;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+
+<VBox prefHeight="530.0" prefWidth="900.0" stylesheets="@application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="views.Report">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" spacing="15.0">
+         <children>
+            <ComboBox fx:id="category" prefWidth="150.0" promptText="Category" />
+            <ComboBox fx:id="item" prefWidth="150.0" promptText="Item" />
+            <DatePicker fx:id="datefrom" promptText="Date From" />
+            <DatePicker fx:id="dateto" promptText="Date To" />
+            <Button mnemonicParsing="false" onAction="#clear" prefWidth="80.0" text="CLEAR">
+               <styleClass>
+                  <String fx:value="color-primary" />
+                  <String fx:value="text-white" />
+               </styleClass>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn prefWidth="100.0" text="Sale Date" >
+          		<cellValueFactory>
+          			<PropertyValueFactory property="saleDate"/>
+          		</cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="139.3333511352539" text="Category Item" >
+          		<cellValueFactory>
+          			<PropertyValueFactory property="category"/>
+          		</cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="140.6666717529297" text="Item" >
+          		<cellValueFactory>
+          			<PropertyValueFactory property="item"/>
+          		</cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="97.3333740234375" text="Price" >
+          		<cellValueFactory>
+          			<PropertyValueFactory property="unitPrice"/>
+          		</cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="83.33334350585938" text="Count" >
+          		<cellValueFactory>
+          			<PropertyValueFactory property="count"/>
+          		</cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="121.33331298828125" text="Sub Total" >
+          		<cellValueFactory>
+          			<PropertyValueFactory property="subTotal"/>
+          		</cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="91.3333740234375" text="Tax" >
+          		<cellValueFactory>
+          			<PropertyValueFactory property="tax"/>
+          		</cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="112.0" text="Total" >
+          		<cellValueFactory>
+          			<PropertyValueFactory property="total"/>
+          		</cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</VBox>
